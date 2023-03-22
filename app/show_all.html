@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang = "en">
+   <head></head>
+   <body>
+      
+      <h3>
+         <a href = "{{ url_for('show_all') }}">Comments - Flask 
+            SQLAlchemy example</a>
+      </h3>
+      
+      <hr/>
+      Thank you for participating in KBYG database! The object of this database is to give the patient an idea on the amount of money their exam/procdeudre will cost prior to arriving at the clinic for your exam. Hence the name Know Before You Go. For years we as patients have gone to normal exams thinking that our insurance would cover the procedure only to find out after the work is completed that we owe a large unobtainable amount of money. This database is aimed at providing you the patient with the information you need to make a informed decision on where you would like to go to get treated with the cost in mind. 
+		
+      <h3>Patient (<a href = "{{ url_for('new') }}">Add Patient
+         </a>)</h3>
+      
+      <table>
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>City</th>
+               <th>Address</th>
+               <th>Insuranc</th>
+            </tr>
+         </thead>
+         
+         <tbody>
+            {% for Patient in Patients %}
+               <tr>
+                  <td>{{ Patient.name }}</td>
+                  <td>{{ Patient.city }}</td>
+                  <td>{{ Patient.addr }}</td>
+                  <td>{{ Patient.insurance }}</td>
+               </tr>
+            {% endfor %}
+         </tbody>
+      </table>
+      
+   </body>
+</html>

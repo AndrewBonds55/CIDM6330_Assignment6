@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+   <body>
+   
+      <h3>Healthcare Organization</h3>
+      <hr/>
+      
+      Please enter Healthcare organization information below
+         <div class = "alert alert-danger">
+           
+         </div>
+      
+      
+      <form action = "{{ request.path }}" method = "post">
+         <label for = "name">Name</label><br>
+         <input type = "text" name = "name" placeholder = "Name" /><br>
+         <label for = "email">City</label><br>
+         <input type = "text" name = "city" placeholder = "city" /><br>
+         <label for = "Address">Address</label><br>
+         <textarea name = "Address" placeholder = "Address"></textarea><br>
+         <label for = "Zip Code">Zip Code</label><br>
+         <input type = "text" name = "Zip" placeholder = "Zip Code" /><br>
+         <input type = "submit" value = "Submit" />
+      </form>
+      
+   </body>
+</html>
